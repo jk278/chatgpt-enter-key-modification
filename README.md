@@ -8,7 +8,7 @@
 
 ## Greasy Fork 脚本地址
 
- []
+ [ChatGPT Enter Key Modification](https://greasyfork.org/zh-CN/scripts/465133-chatgpt-enter-key-modification)
 
 ## 移动端按钮样式
 
