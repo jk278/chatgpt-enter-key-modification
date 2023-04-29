@@ -1,4 +1,4 @@
-# chatgpt-enter-key-modification
+# ChatGPT Enter Key Modification
 一个 ChatGPT 回车处理脚本
 
 ## 它能做什么？
