@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ChatGPT Enter Key Modification
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Modify the behavior of the enter key based on device type
 // @author       jk278
 // @match        https://chat.openai.com/*
@@ -16,7 +16,7 @@
     const localStorageKey = 'enterToSend';
 
     const modifyEnterBehavior = () => {
-        console.log("运行 modifyEnterBehavior");
+        // console.log("运行 modifyEnterBehavior");
         const textarea = document.querySelector('textarea');
         if (!textarea) return;
 
@@ -48,7 +48,7 @@
     };
 
     const createToggleEnterButton = () => {
-        console.log("运行 createToggleEnterButton");
+        // console.log("运行 createToggleEnterButton");
         if (!isMobile) return;
 
         const buttonContainer = document.createElement('div');
@@ -56,6 +56,7 @@
 
         const button = document.createElement('button');
         button.classList.add('btn', 'relative', 'btn-neutral', 'border-0', 'md:border');
+        button.setAttribute('id', 'enter-key-button');
         const bottonHTML = '<div class="flex w-full items-center justify-center gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle></svg></div>';
         button.innerHTML = bottonHTML;
 
@@ -99,14 +100,14 @@
             const textarea = document.querySelector('textarea');
             const textareaParent = textarea.parentNode;
             let width = textareaParent.clientWidth;
-            console.log('Textarea width:', width);
+            // console.log('Textarea width:', width);
 
             // 创建一个ResizeObserver实例
             const resizeObserver = new ResizeObserver(entries => {
                 for (let _entry of entries) { //未使用的声明添加下划线前缀
                     const newWidth = textareaParent.clientWidth; // entry.contentRect.width 返回的是元素的实际宽度
                                                                 // textarea.clientWidth 返回的是元素的CSS宽度
-                    if (newWidth < width) {
+                    if (newWidth < width && !document.querySelector('#enter-key-button')) { // 部分浏览器加载两个按钮
                         const firstGrandchild = firstChild.firstElementChild;
                         firstChild.insertBefore(buttonContainer, firstGrandchild);
                     }
