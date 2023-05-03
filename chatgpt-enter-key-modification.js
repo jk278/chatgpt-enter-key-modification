@@ -1,14 +1,18 @@
 // ==UserScript==
-// @name                ChatGPT Enter Key Modification ↵
-// @name:zh-CN          ChatGPT 回车键修改 ↵
-// @version             1.2
+// @name                ChatGPT 回车键修改 ↵
+// @name:en             ChatGPT Enter Key Modification ↵
+// @name:zh-TW          ChatGPT 回車鍵修改 ↵
+// @version             1.2.1
 // @author              jk278
 // @namespace           https://github.com/jk278/chatgpt-enter-key-modification
-// @description         Modify the behavior of the enter key based on device type
-// @description:zh-CN   根据设备类型修改回车键的行为
+// @description         根据设备类型修改回车键的行为
+// @description:en      Modify the behavior of the enter key based on device type
+// @description:zh-TW   根據設備類型修改回車鍵的行爲
 // @match               https://chat.openai.com/*
 // @grant               none
 // @icon                https://raw.githubusercontent.com/jk278/chatgpt-enter-key-modification/main/openai-icon_48.png
+// @homepageURL         https://github.com/jk278/chatgpt-enter-key-modification
+// @supportURL          https://github.com/jk278/chatgpt-enter-key-modification/issues
 // ==/UserScript==
 
 (function () {
