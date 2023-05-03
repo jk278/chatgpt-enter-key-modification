@@ -1,12 +1,14 @@
 // ==UserScript==
-// @name         ChatGPT Enter Key Modification
-// @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  Modify the behavior of the enter key based on device type
-// @author       jk278
-// @match        https://chat.openai.com/*
-// @grant        none
-// @namespace    https://github.com/jk278/chatgpt-enter-key-modification
+// @name                ChatGPT Enter Key Modification ↵
+// @name:zh-CN          ChatGPT 回车键修改 ↵
+// @version             1.2
+// @author              jk278
+// @namespace           https://github.com/jk278/chatgpt-enter-key-modification
+// @description         Modify the behavior of the enter key based on device type
+// @description:zh-CN   根据设备类型修改回车键的行为
+// @match               https://chat.openai.com/*
+// @grant               none
+// @icon                https://raw.githubusercontent.com/jk278/chatgpt-enter-key-modification/main/openai-icon_48.png
 // ==/UserScript==
 
 (function () {
